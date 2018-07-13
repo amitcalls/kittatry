@@ -3,4 +3,4 @@ def fu(a):
 
 z = fu("a")
 x = fu("b")
-print(z(10)+x(5))
+print(z(10)+x(10))
