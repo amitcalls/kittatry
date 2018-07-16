@@ -1,32 +1,22 @@
-def iq_test(numbers):
-
-    x = 0
-    y=numbers.split(" ")
-    o = 0
-    e = 0
-
-    while x < len(y):
-        if int(y[x])%2 == True:
-            o+=1
-        else:
-            e+=1
+import numpy as np
+l1 = np.array([[[1, 2, 3], [4, 5, 6], [7,8,9]],[[10, 20, 30], [40, 50, 60], [70,80,90]]])
+# l2 = np.array([[6],[7],[8],[9],[10]])
+# Sum = l1 + l2
+x=y=z=0
+while z<=1:
+    x=0
+    while x<=2:
+        y=0
+        while y<=2:
+            print("this is depth: ", z, "row: ", x, "column: ", y, " = ", l1[z,x,y])
+            y+=1
         x+=1
+    
+    z+=1
+    
 
-    z=0
-    if o==1:
-        while z < len(y):
-            if int(y[z])%2 == True:
-                return(z+1)
-                break
-            z+=1
-    elif e==1:
-        while z < len(y):
-            if int(y[z])%2 == False:
-                return(z+1)
-                break
-            z+=1
-    else:
-        return(0)
-
-    #o = [int(num) for num in y]
-# print(iq_test("1 2 3 4"))
+# import pandas as pd
+# a = {"a":10, "b":5, "c":1, "d":0}
+# b = pd.Series(a)
+# b.rename(index = {"a" : "v"}, inplace = True )
+# c = b[["v", "c"]]
